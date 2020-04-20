@@ -7,7 +7,7 @@
 **Asignatura de Informática 1**
 
 **Docente: Alejandro Paolo Daza**
-  ![Construccion_Vehiculo](https://raw.githubusercontent.com/lsfajardot/microservicios/master/microservicios/0.PNG)
+  ![](https://raw.githubusercontent.com/lsfajardot/microservicios/master/microservicios/0.PNG)
 
 | **Nombre: Angee Paola Ballesteros Maldonado** | **Código: 20201099027** |
 | --- | --- |
