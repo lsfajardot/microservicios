@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>Calculadora</title>
+        <link 
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"/>
+        <style>
+            .vertical-center {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+            }
+            .alert {
+                background: green;
+                padding: 1rem;
+                border-radius: 5px;
+                color: white;
+                margin: 1rem;
+                text-align: center !important;
+            }   
+            .inputNumber{
+                text-align: center !important;
+                height: 38px !important;
+                padding: 6px 10px !important;
+                background-color: #fff !important;
+                border: 1px solid #33c3f0 !important;
+                border-radius: 4px !important;
+                box-shadow: none !important;
+                box-sizing: border-box !important;
+            } 
+            .buttonCalc{
+                text-align: center !important;
+                box-shadow:inset 0px 1px 0px 0px #bbdaf7 !important;
+                background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%) !important;
+                background-color:#79bbff !important;
+                border-radius:6px !important;
+                border:1px solid #84bbf3 !important;
+                display:inline-block !important;
+                cursor:pointer !important;
+                color:#ffffff !important;
+                font-family:Arial !important;
+                font-size:15px !important;
+                font-weight:bold !important;
+                text-decoration:none !important;
+                text-shadow:0px 1px 0px #528ecc !important;
+                align-content: center !important;
+            } 
+            .myButton:hover {
+                background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%) !important;
+                background-color:#378de5 !important;
+            }
+            .myButton:active {
+                position:relative !important;
+                top:1px !important;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container" style="text-align: center;">
+            <h3>
+                Calculadora 
+            </h3>
+        </div>          
+    <!-- Form -->
+    <div class="container" style="text-align: center;">
+    <form action="/send" method="POST">
+        <!-- Primer Número -->
+        <label for="Primer Número" style="text-align: center;">Primer Número</label>
+        <input
+          class="inputNumber"
+          type="text"
+          placeholder="Número"
+          name="firstNumber"
+        />
+        <!-- Segundo Número -->
+        <label for="Number Two" style="text-align: center;">Segundo Número</label>
+        <input
+          class="inputNumber"
+          type="text"
+          placeholder="Número"
+          name="secondNumber"
+        />
+        <!-- Seleccionar Operacion -->
+        <label for="Operation">Operación</label>
+        <select name="operation">
+          <option value="add">Sumar</option>
+          <option value="subtract">Restar</option>
+          <option value="multiply">Multiplicar</option>
+          <option value="divide">Dividir</option>
+        </select>
+        <br />
+        <!-- Boton Calcular -->
+        <input 
+            action="/send" method="POST"
+            type="submit" 
+            value="Calcular" 
+            id="calc_btn" 
+            class="buttonCalc"
+        />       
+        <br />
+        <label for="Result" style="text-align: center;">Resultado:</label>
+        <div class="alert">
+            {{ sum }}
+        </div>
+        </form> 
+        <br />
+        <label for="Creators" style="text-align: center;">Powered By.</label>
+        <label for="Creators" style="text-align: center;">Ariza Jeison - Ballesteros Angee - Fajardo Luigi</label>
+      </div>
+        
+    </body>
+</html>

@@ -1,0 +1,39 @@
+version: "2"
+services:
+    suma:
+        build: ./suma
+        ports: 
+            - "4710:4710"
+        container_name: "suma"
+    resta:
+        build: ./resta
+        ports: 
+            - "4720:4720"
+        container_name: "resta"    
+    multiplicacion:
+        build: ./multiplicacion
+        ports: 
+            - "4730:4730"
+        container_name: "multiplicacion"
+    division:
+        build: ./division
+        ports: 
+            - "4740:4740"
+        container_name: "division"
+    app:
+        build: ./source
+        volumes:
+            - ./source:/usr/src/app
+        ports: 
+            - "4700:4700"
+        links: 
+            - suma
+            - resta
+            - multiplicacion
+            - division
+        container_name: "app"
+        
+    
+
+
+    
