@@ -7,7 +7,7 @@
 **Asignatura de Informática 1**
 
 **Docente: Alejandro Paolo Daza**
-  ![0](https://raw.githubusercontent.com/lsfajardot/microservicios/master/microservicios/0.PNG)
+  ![0](https://raw.githubusercontent.com/lsfajardot/microservicios/blob/master/0.PNG)
 
 | **Nombre: Angee Paola Ballesteros Maldonado** | **Código: 20201099027** |
 | --- | --- |
