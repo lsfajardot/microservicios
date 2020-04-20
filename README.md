@@ -41,63 +41,63 @@ Luego de esta breve explicación sobre las características de los recursos a ut
 
 Primero se deben construir los servicios para cada una de las operaciones aritméticas, cada uno de estos se aloja en una carpeta independiente. Como se puede observar a continuación la estructura del proyecto contiene una carpeta para cada servicio.
 
-![](RackMultipart20200420-4-1nezcsg_html_4ca9f2e4c3aab60e.png)
+![1](https://raw.githubusercontent.com/lsfajardot/microservicios/master/1.png)
 
 Figura 1: Estructura del Proyecto
 
 Dentro de cada una de las carpetas se tiene el servicio de cada operación aritmética, el archivo docker y los requerimientos necesarios.
 
-![](RackMultipart20200420-4-1nezcsg_html_d39707ffec41dace.png)
+![2](https://raw.githubusercontent.com/lsfajardot/microservicios/master/2.png)
 
 Figura 2: Estructura de los servicios
 
 Cada uno de los servicios debe importar las herramientas necesarias para su correcto funcionamiento en el desarrollo, primero se debe importar Flask, render\_template, request, jsonify, posteriormente flask\_cors y waitress y por último json, requests y traceback.
 
-![](RackMultipart20200420-4-1nezcsg_html_16fcba40cb275508.png)
+![3](https://raw.githubusercontent.com/lsfajardot/microservicios/master/3.png)
 
 Figura 3: Importación de las herramientas
 
 A continuación, se muestra la lógica utilizada en el llamado de los servicios y adicionalmente la definición del host que alojara la aplicación principal del desarrollo.
 
-![](RackMultipart20200420-4-1nezcsg_html_4762d689a8e51103.png)
+![4](https://raw.githubusercontent.com/lsfajardot/microservicios/master/4.png)
 
 Figura 4: Lógica para llamar a los servicios
 
-![](RackMultipart20200420-4-1nezcsg_html_57f56728bcda30af.png)
+![5](https://raw.githubusercontent.com/lsfajardot/microservicios/master/5.png)
 
 Figura 5: Definición del Host (waitress)
 
 Posteriormente se define la lógica de cada uno de los servicios, en la siguiente figura se observa la lógica del servicio de suma desarrollado.
 
-![](RackMultipart20200420-4-1nezcsg_html_90ab2a000c147d7c.png)
+![6](https://raw.githubusercontent.com/lsfajardot/microservicios/master/6.png)
 
 Figura 6: Lógica de los servicios (suma)
 
 Luego de desarrollar cada uno de los servicios es necesario crear los contenedores de los mismos, por esta razón, en todos los servicios es necesario crear un archivo Dockerfile que se encarga de crear un orden de las tareas necesarias para que los servicios que se van a ejecutar operen de manera correcta sin necesidad de hacer instalaciones o pasos intermedios.
 
-![](RackMultipart20200420-4-1nezcsg_html_b40bf373b1f1b6c1.png)
+![7](https://raw.githubusercontent.com/lsfajardot/microservicios/master/7.png)
 
 Figura 7: Dockerfile (app)
 
-![](RackMultipart20200420-4-1nezcsg_html_f3edc54f5a6f5046.png)
+![8](https://raw.githubusercontent.com/lsfajardot/microservicios/master/8.png)
 
 Figura 8: Dockerfile Servicios (suma)
 
 Después de crear cada uno de los archivos Dockerfile para cada servicio se procede a crear el archivo &quot;docker-compose.yml&quot;, dicho archivo es el encargado de realizar de manera automática la creación de las imágenes y dejar en contenedores los servicios listos para su despliegue, en este archivo especificamos los puertos y los nombres de los contenedores para que se puedan comunicar entre ellos.
 
-![](RackMultipart20200420-4-1nezcsg_html_63aa4501f8e7de1a.png)
+![9](https://raw.githubusercontent.com/lsfajardot/microservicios/master/9.png)
 
 Figura 9: docker-compose.yml
 
 Posteriormente se valida el correcto funcionamiento de la herramienta Docker Desktop.
 
-![](RackMultipart20200420-4-1nezcsg_html_22095078fdfd2a8.png)
+![10](https://raw.githubusercontent.com/lsfajardot/microservicios/master/10.png)
 
 Figura 10: Validación Docker Desktop is Running
 
 Después de ejecutar la instrucción &quot;docker-compose up&quot; podemos ver como los contenedores son desplegados.
 
-![](RackMultipart20200420-4-1nezcsg_html_d354fea0bb98fa21.png)
+![11](https://raw.githubusercontent.com/lsfajardot/microservicios/master/11.png)
 
 Figura 11: Servicios Iniciados
 
